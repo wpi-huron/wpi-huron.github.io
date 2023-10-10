@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Standing push recovery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+<div id="page-wrapper">
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="../HURON.html">HURON</a></h1>
+        <nav id="nav">
+            <ul class="nobullet">
+                <li class="special">
+                    <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                    <div id="menu">
+                        <ul>
+                            <li><a class="navbaritem" href="../HURON.html">Home</a></li>
+                            <li><a class="navbaritem" href="../Research.html">Research</a></li>
+                            <li><a class="navbaritem" href="../News.html">News</a></li>
+                            <li><a class="navbaritem" href="../People.html">People</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+        <article id="main">
+            <section class="wrapper style5">
+                <div class="inner">
+                    <header class="major">
+                        <h3><a href="../Research.html">Research</a> > Standing push recovery</h3>
+                    </header>
+                    <p>Developing a robust control to maintain balance in the presence of external disturbances has
+                        remained one of the primary challenges of humanoid robots.  These robots must be able to
+                        perform multiple tasks in highly complex environments. If the robot loses its equilibrium, it
+                        might injure nearby people or malfunction, which could be disastrous. Therefore, designing a
+                        reliable control method that preserves the robot’s stability is crucial.
+                    </p>
+                    <p>
+                        This research is specifically concerned with the issue of maintaining
+                        balance while in an upright stance. Experiments on
+                        human balance have shown that people react to disturbance
+                        forces by bending their ankles, hips, and arms or taking
+                        steps in the case of excessive forces. The "ankle
+                        strategy" locks all joints except the ankle and balances the
+                        body like an inverted pendulum. When the pushing force
+                        is substantially larger, humans utilize a mechanism known
+                        as the "hip strategy" to generate momentum by rotating the
+                        torso at the hips. By bending the body in the direction of
+                        the disturbance force, angular momentum can be immediately
+                        generated around the center of mass (CoM), allowing
+                        the force of the disturbance to be quickly absorbed. As the
+                        disruptive force diminishes, the body attempts to regain its
+                        original position.
+                    </p>
+                    <p>
+                        We propose a new controller based on momentum concepts and a new reaching law for sliding mode
+                        control that can help the robot withstand higher forces while standing. A demo of the controller
+                        in Gazebo simulator can be seen below, where the robot is pushed with a 9 Ns impulse
+                        (9000 N in 1 ms). The robot is able to balance and move back to the upright posture after the
+                        impact.
+                    </p>
+
+                    <p>
+                        The next step is to implement this control on the real physical robot.
+                    </p>
+
+                    <div style="text-align: center; max-width: 75%;">
+                        <video style="max-width: 100%" controls="controls">
+                            <source src="/images/push_recovery.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+
+
+                </div>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="actions stacked">
+                <li class="fa fa-envelope"> gr-huron@wpi.edu</a></li>
+                <li class="fas fa-map-marker-alt"> Unity Hall 150, WPI, Worcester, MA</li>
+            </ul>
+            <ul class="copyright">
+                <li style = "font-size: 8px;">&copy; HURON. All rights reserved. </li>
+                <li style = "font-size: 8px;"> Website template credits belongs to html5up.net | @ajlkn. </li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
